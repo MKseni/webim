@@ -62,13 +62,13 @@
 						  	<div class="form-group form-required">
 						    	<label for="inputEmail3" class="col-md-3 control-label">Email:</label>
 						    	<div class="col-md-9">
-						      		<input type="email" class="form-control" id="inputEmail3" required placeholder="Введите адрес электронной почты">
+						      		<input type="email" class="form-control" name="email" id="email" required placeholder="Введите адрес электронной почты">
 						    	</div>
 						 	</div>
 						  	<div class="form-group form-required">
 						    	<label for="inputPassword3" class="col-md-3 control-label">Пароль:</label>
 						    	<div class="col-md-9">
-						      		<input type="password" class="form-control" id="inputPassword3" required placeholder="Введите пароль">
+						      		<input type="password" class="form-control" id="password" name="password" required placeholder="Введите пароль">
 						    	</div>
 						  	</div>
 						  	<div class="form-group">
@@ -112,7 +112,7 @@
 						  	</div>
 						  	<div class="form-group">
 						    	<div class="col-md-offset-3 col-md-9">
-						      		<button type="submit" class="btn btn-primary">Войти</button>
+						      		<button type="submit" class="btn btn-primary" value="Sign in" id="button" onclick="validate()">Войти</button>
 						      		<a href="" class="pull-right">Восстановить пароль</a>
 						    	</div>
 						  	</div>
@@ -134,10 +134,36 @@
 				<a href="http://webim.ru" class="navbar-link" title="Сервис Webim" target="_blank">webim.ru</a>
 			</p>
 		</footer>
-
+		<div class="webim-ico webim-ico-message" data-webim-button="image"></div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
  		<script src="https://use.fontawesome.com/d9826a3937.js"></script>
+
+ 		<script>
+
+	function validate(){
+
+		var log = new Array("email", "admin");
+		var pass = new Array("password", "admin");
+		var login_ok = false;
+		var user_name;
+		var password;
+
+		user_name = document.getElementById("email").value;
+	    password = document.getElementById("password").value;
+
+	    for(var i = 0; i < log.length; i++){
+	    		if(user_name == log[i] && password == pass[i]){
+	    			login_ok = true;
+	    		} 
+	    }	
+		if(login_ok){
+			alert("Hello, " + user_name);
+		} else {
+			alert("Invalid login or password");
+		}
+ }
+</script>
 	</body>
 </html>
