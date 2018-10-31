@@ -1,0 +1,143 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Webim</title>
+	    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="webim.css">
+	</head>
+	<body style="background-color: #f8f8f8">
+		<header class="header">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="webim.ru">
+						<img src="logo.gif" alt="Сервис Webim" title="На главную">
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<div class="nav navbar-right">
+						<button type="button" class="btn btn-primary" id="btn_enter">Вход в систему</button>
+						<button type="button" class="btn btn-primary" id="btn_sing">Регистрация</button>
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							    <span class="flag-ico ru" title="RU"></span>
+							    <b class="caret"></b>
+							</button>
+							<ul class="dropdown-menu">
+                                <li>
+                                	<a href="?admin_lang=en">
+                                		<span class="flag-ico en" title="EN"></span>
+                                	 EN</a>
+                                </li>
+                                <li class="active">
+                                	<a href="?admin_lang=ru">
+                                		<span class="flag-ico ru" title="RU"></span> 
+                                	RU</a>
+                                </li>
+                                <li>
+                                	<a href="?admin_lang=he">
+                                		<span class="flag-ico he" title="HE"></span> 
+                                	HE</a>
+                                </li>
+                        	</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container main">
+			<div class="container-center-block">
+				<section class="center-block">
+					<div class="content block block-default">
+						<h1>Вход в административный интерфейс онлайн-консультанта Webim</h1>
+						<form class="form-horizontal" role="form">
+						  	<div class="form-group form-required">
+						    	<label for="inputEmail3" class="col-md-3 control-label">Email:</label>
+						    	<div class="col-md-9">
+						      		<input type="email" class="form-control" id="inputEmail3" required placeholder="Введите адрес электронной почты">
+						    	</div>
+						 	</div>
+						  	<div class="form-group form-required">
+						    	<label for="inputPassword3" class="col-md-3 control-label">Пароль:</label>
+						    	<div class="col-md-9">
+						      		<input type="password" class="form-control" id="inputPassword3" required placeholder="Введите пароль">
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+    							<label for="online" class="control-label col-md-3">Статус:</label>        
+    							<div class="col-md-9">
+	            					<select class="form-control " name="online" id="online" style="display: none;">
+                                        <option value="online" data-description="">Онлайн</option>
+                                        <option value="offline" data-description="">Оффлайн</option>
+									</select>
+									<div class="btn-group bootstrap-select form-control">
+                                		<button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" data-id="online" title="Онлайн">
+                                			<span class="filter-option pull-left">Онлайн</span>&nbsp;
+                                			<span class="caret"></span>
+                                		</button>
+                                		<div class="dropdown-menu open">
+                                			<ul class="dropdown-menu inner selectpicker" role="menu">
+                                				<li rel="0" class="selected">
+		                                			<a tabindex="0" class="" style="">
+		                                				<span class="text">Онлайн</span>
+		                                			</a>
+		                                		</li>
+		                                		<li rel="1">
+		                                			<a tabindex="0" class="" style="">
+		                                				<span class="text">Оффлайн</span>
+		                                			</a>
+		                                		</li>
+		                                	</ul>
+                                		</div>
+                            		</div>
+	    						</div>
+	    					</div>
+						  	<div class="form-group">
+						        <label for="is_remember" class="control-label col-md-3">
+						     		Запомнить
+						     	</label>
+						    	<div class="col-md-9">
+						      		<div class="checkbox">
+						      			<input type="checkbox" name="is_remember">
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<div class="col-md-offset-3 col-md-9">
+						      		<button type="submit" class="btn btn-primary">Войти</button>
+						      		<a href="" class="pull-right">Восстановить пароль</a>
+						    	</div>
+						  	</div>
+						</form>
+					</div>
+					<div class="app-buttons center-block">
+							<a href="http://webim.ru/ios/" target="itunes_store" class="ios"><img src="badge_appstore-lrg.png" alt="Webim Live Chat For Your Site - Webim"></a>
+							<a href="http://webim.ru/android/" target="android_store" class="android"><img alt="Webim Live Chat For Your Site - Webim" src="ru-play-badge.png"></a>
+					</div>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<a class="brand system-version" style="cursor: pointer;" title="2017-06-21">Webim 
+				<span class="version-number"> 8.16.54</span>
+			</a>
+			<span class="brand system-mode"">Защищённый режим</span>
+			<p class="copyright">Предоставлено: 
+				<a href="http://webim.ru" class="navbar-link" title="Сервис Webim" target="_blank">webim.ru</a>
+			</p>
+		</footer>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+ 		<script src="https://use.fontawesome.com/d9826a3937.js"></script>
+	</body>
+</html>
